@@ -2,7 +2,7 @@
 https://en.wikipedia.org/wiki/Proibid%C3%A3o
 
 
-BASES DE BATIDÃO
+BASES
 1 - https://www.youtube.com/watch?v=fZNvDz4p2sQ
 2 - https://www.youtube.com/watch?v=jiX_jy57MNQ
 

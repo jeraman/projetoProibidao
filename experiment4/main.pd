@@ -4,8 +4,8 @@
 #X obj 159 41 openpanel;
 #X obj 157 5 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
-#X msg 265 71 start;
-#X msg 268 97 stop;
+#X msg 257 17 start;
+#X msg 260 43 stop;
 #X obj 151 133 print;
 #X obj 206 172 *~ 2;
 #X obj 199 258 s~ voice;
@@ -20,6 +20,8 @@
 #X msg 472 305 wet 0.15;
 #X msg 472 331 dry 0.9;
 #X obj 464 276 loadbang;
+#X msg 265 75 pause;
+#X obj 634 263;
 #X connect 0 0 7 0;
 #X connect 1 0 0 0;
 #X connect 1 0 6 0;
@@ -40,3 +42,4 @@
 #X connect 18 0 16 0;
 #X connect 19 0 17 0;
 #X connect 19 0 18 0;
+#X connect 20 0 0 0;

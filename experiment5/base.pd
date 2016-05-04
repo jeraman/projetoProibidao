@@ -1,0 +1,76 @@
+#N canvas 774 51 631 747 10;
+#X obj 146 174 readsf~;
+#X msg 143 108 open \$1;
+#X obj 139 68 openpanel;
+#X obj 141 40 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X msg 208 121 start;
+#X msg 211 147 stop;
+#X obj 100 162 print;
+#X obj 83 340 dac~;
+#X obj 334 550 bonk~;
+#N canvas 660 173 579 589 templates 0;
+#X msg 76 197 learn 0;
+#X msg 76 227 forget;
+#X msg 76 257 write templates.txt;
+#X msg 76 287 read templates.txt;
+#X msg 76 107 debounce 0;
+#X msg 76 137 learn 10;
+#X obj 62 431 outlet;
+#X text 155 133 Forget all templates and start learning new ones. The
+argument gives the number of times you will hit each instrument (10
+recommended.) Turn on the output volume above for audible feedback
+as you train Bonk. "Learn 0" exits learn mode.;
+#X text 155 217 Forget the last template. In Learn mode \, use "forget"
+to erase and record over a template.;
+#X text 220 253 Write templates to a file in text-editable format.
+;
+#X text 221 283 Read templates from a file.;
+#X text 157 104 Minimum time (msec) between attacks in learn mode;
+#X connect 0 0 6 0;
+#X connect 1 0 6 0;
+#X connect 2 0 6 0;
+#X connect 3 0 6 0;
+#X connect 4 0 6 0;
+#X connect 5 0 6 0;
+#X restore 351 517 pd templates;
+#X obj 317 583 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X msg 380 403 minvel \$1;
+#X floatatom 377 369 5 0 0 0 - - -;
+#X msg 359 326 mask 4 0.9;
+#X obj 276 460 lop~ 10;
+#X obj 302 612 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X msg 333 290 thresh 5 15;
+#X obj 294 645 s test;
+#X obj 151 203 s~ base;
+#X obj 121 254 r~ base;
+#X obj 269 407 r~ base;
+#X text 325 612 gives rhythm to the voice;
+#X obj 208 193 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X msg 208 215 0;
+#X obj 209 237 s test;
+#X text 243 211 stops voice when finished;
+#X connect 0 0 18 0;
+#X connect 0 1 22 0;
+#X connect 1 0 0 0;
+#X connect 1 0 6 0;
+#X connect 2 0 1 0;
+#X connect 3 0 2 0;
+#X connect 4 0 0 0;
+#X connect 5 0 0 0;
+#X connect 8 0 10 0;
+#X connect 9 0 8 0;
+#X connect 10 0 15 0;
+#X connect 11 0 8 0;
+#X connect 12 0 11 0;
+#X connect 13 0 8 0;
+#X connect 14 0 8 0;
+#X connect 15 0 17 0;
+#X connect 16 0 8 0;
+#X connect 19 0 7 0;
+#X connect 20 0 14 0;
+#X connect 22 0 23 0;
+#X connect 23 0 24 0;
