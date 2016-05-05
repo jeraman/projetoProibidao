@@ -3,8 +3,8 @@ https://en.wikipedia.org/wiki/Proibid%C3%A3o
 
 
 BASES
-1 - https://www.youtube.com/watch?v=fZNvDz4p2sQ
-2 - https://www.youtube.com/watch?v=jiX_jy57MNQ
+- https://www.youtube.com/watch?v=fZNvDz4p2sQ
+- https://www.youtube.com/watch?v=jiX_jy57MNQ
 
 SOURCE CODE
 - Autotune: thttp://forum.pdpatchrepo.info/topic/3272/autotune/19
