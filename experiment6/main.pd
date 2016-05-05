@@ -1,21 +1,21 @@
-#N canvas 289 32 1069 788 10;
-#X obj 401 388 autotune2~;
-#X obj 396 670 dac~;
-#X obj 281 39 base-funk;
-#X obj 353 167 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#N canvas 553 23 667 841 10;
+#X obj 264 387 autotune2~;
+#X obj 252 724 dac~;
+#X obj 118 17 base-funk;
+#X obj 191 157 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
-#X obj 275 168 dac~;
-#X obj 351 208 voice;
-#X obj 543 213 scale-manager;
-#X floatatom 545 290 5 0 0 0 - - -;
+#X obj 112 146 dac~;
+#X obj 190 206 voice;
+#X obj 382 211 scale-manager;
+#X floatatom 384 288 5 0 0 0 - - -;
 #N canvas 632 527 442 342 rvrb~ 0;
 #X obj 10 257 freeverb~;
 #X obj 115 42 loadbang;
 #X obj -18 214 inlet~;
 #X obj 106 130 vsl 17 40 0 1 0 0 empty empty dry 0 -9 0 9 -262144 -1
--1 3300 1;
+-1 3900 1;
 #X obj 132 130 vsl 17 40 0 1 0 0 empty empty wet 0 -9 0 9 -262144 -1
--1 400 1;
+-1 585 1;
 #X msg 138 199 wet \$1;
 #X msg 67 199 dry \$1;
 #X obj 5 310 outlet~;
@@ -32,15 +32,31 @@
 #X connect 8 0 4 0;
 #X connect 9 0 3 0;
 #X coords 0 -1 1 1 55 80 1 100 100;
-#X restore 397 574 pd rvrb~;
-#X text 590 297 what note the target is going to sing?;
+#X restore 263 620 pd rvrb~;
+#X text 429 295 what note the target is going to sing?;
+#X floatatom 202 568 5 0 1 0 - - -;
+#X obj 185 604 *~;
+#X msg 487 173 0;
+#X msg 526 173 2;
+#X obj 201 520 loadbang;
+#X msg 201 545 0.11;
+#X msg 594 171 5;
+#X msg 562 174 4;
 #X connect 0 0 8 0;
 #X connect 2 0 4 0;
 #X connect 2 0 4 1;
 #X connect 2 1 3 0;
-#X connect 3 0 6 0;
 #X connect 5 0 0 0;
+#X connect 5 0 11 0;
 #X connect 6 0 7 0;
 #X connect 7 0 0 1;
 #X connect 8 0 1 0;
 #X connect 8 0 1 1;
+#X connect 10 0 11 1;
+#X connect 11 0 8 0;
+#X connect 12 0 6 1;
+#X connect 13 0 6 1;
+#X connect 14 0 15 0;
+#X connect 15 0 10 0;
+#X connect 16 0 6 1;
+#X connect 17 0 6 1;
