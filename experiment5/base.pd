@@ -40,7 +40,7 @@ to erase and record over a template.;
 #X floatatom 377 369 5 0 0 0 - - -;
 #X msg 359 326 mask 4 0.9;
 #X obj 276 460 lop~ 10;
-#X obj 302 612 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 302 612 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
 #X msg 333 290 thresh 5 15;
 #X obj 294 645 s test;
@@ -53,6 +53,8 @@ to erase and record over a template.;
 #X msg 208 215 0;
 #X obj 209 237 s test;
 #X text 243 211 stops voice when finished;
+#X obj 469 345 loadbang;
+#X msg 468 373 26;
 #X connect 0 0 18 0;
 #X connect 0 1 22 0;
 #X connect 1 0 0 0;
@@ -74,3 +76,5 @@ to erase and record over a template.;
 #X connect 20 0 14 0;
 #X connect 22 0 23 0;
 #X connect 23 0 24 0;
+#X connect 26 0 27 0;
+#X connect 27 0 12 0;

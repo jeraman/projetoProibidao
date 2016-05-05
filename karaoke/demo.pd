@@ -10,7 +10,7 @@
 #X obj 225 248 autotune2~;
 #X obj 182 157 adc~;
 #X floatatom 320 224 5 0 0 0 - - -;
-#X obj 297 176 - 24;
+#X obj 297 176 - 12;
 #X connect 1 0 11 0;
 #X connect 5 0 1 0;
 #X connect 5 1 2 0;
