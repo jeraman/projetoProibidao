@@ -71,6 +71,10 @@
 #X text 282 114 a more advanced wave player with speed \, play/pause
 \, and position control;
 #X obj 32 103 r bf-stop;
+#X msg 32 130 0;
+#X obj 32 160 s vc-position;
+#X obj 228 33 r bf-loaded;
+#X msg 225 57 1;
 #X connect 0 0 1 0;
 #X connect 0 0 5 0;
 #X connect 1 0 31 0;
@@ -100,5 +104,9 @@
 #X connect 35 0 6 1;
 #X connect 36 0 7 1;
 #X connect 37 0 24 0;
-#X connect 39 0 19 0;
+#X connect 39 0 40 0;
+#X connect 40 0 19 0;
+#X connect 40 0 41 0;
+#X connect 42 0 43 0;
+#X connect 43 0 19 0;
 #X coords 0 -1 1 1 90 120 1 100 100;
