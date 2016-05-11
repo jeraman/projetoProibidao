@@ -45,7 +45,7 @@
 #X obj 280 47 inlet;
 #X obj 273 200 mod 16;
 #X obj 274 233 hradio 15 1 0 16 empty empty empty 0 -8 0 10 -262144
--1 -1 12;
+-1 -1 6;
 #X obj 273 162 float;
 #X obj 352 167 + 1;
 #X floatatom 221 233 5 0 0 0 - - -;
@@ -118,7 +118,7 @@
 #X obj 206 34 inlet;
 #X obj 273 200 mod 16;
 #X obj 274 232 hradio 15 1 0 16 empty empty empty 0 -8 0 10 -262144
--1 -1 12;
+-1 -1 6;
 #X obj 273 162 float;
 #X obj 352 167 + 1;
 #X floatatom 221 233 5 0 0 0 - - -;
