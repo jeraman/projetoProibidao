@@ -1,0 +1,66 @@
+#N canvas 506 23 815 734 10;
+#X obj 459 241 gemwin;
+#X msg 455 128 create \, 1;
+#X msg 521 161 0 \, destroy;
+#X obj 459 293 gemhead;
+#X obj 461 276 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X obj 459 359 pix_film;
+#X obj 103 62 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 100 79 openpanel;
+#X msg 102 104 open \$1;
+#X obj 761 318 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X msg 755 338 auto \$1;
+#X obj 463 482 pix_texture;
+#X obj 512 427 unpack 0 0 0;
+#X floatatom 502 450 5 0 0 3 length - -;
+#X floatatom 551 450 5 0 0 3 width - -;
+#X floatatom 601 450 5 0 0 3 height - -;
+#X msg 538 195 dimen 1280 720;
+#X floatatom 727 282 5 0 0 0 - - -;
+#X obj 469 508 rectangle 7 4;
+#X obj 524 405 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X msg 729 250 0;
+#X text 397 585 ffmpeg -i INPUT.mov -vcodec mjpeg -q:v 1 OUTPUT.mov
+;
+#X text 361 548 playing and looping a video. the video should be converted
+via (reference: http://www.giulianobici.com/site/lab.html):;
+#X obj 185 315 readsf~;
+#X msg 247 262 start;
+#X msg 250 288 stop;
+#X obj 45 166 print;
+#X obj 103 144 s filename;
+#X obj 518 306 r filename;
+#X obj 184 231 r filename;
+#X obj 185 378 dac~;
+#X text 140 409 trying to get the audio from the video;
+#X connect 1 0 0 0;
+#X connect 2 0 0 0;
+#X connect 3 0 5 0;
+#X connect 4 0 3 0;
+#X connect 5 0 11 0;
+#X connect 5 1 12 0;
+#X connect 5 2 19 0;
+#X connect 6 0 7 0;
+#X connect 7 0 8 0;
+#X connect 8 0 26 0;
+#X connect 8 0 27 0;
+#X connect 9 0 10 0;
+#X connect 10 0 5 0;
+#X connect 11 0 18 0;
+#X connect 12 0 13 0;
+#X connect 12 1 14 0;
+#X connect 12 2 15 0;
+#X connect 16 0 0 0;
+#X connect 17 0 5 1;
+#X connect 19 0 20 0;
+#X connect 20 0 17 0;
+#X connect 23 0 30 0;
+#X connect 23 0 30 1;
+#X connect 24 0 23 0;
+#X connect 25 0 23 0;
+#X connect 28 0 5 0;
+#X connect 29 0 23 0;
