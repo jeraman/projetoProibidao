@@ -1,5 +1,5 @@
 # projetoProibidao
-https://en.wikipedia.org/wiki/Proibid%C3%A3o
+
 
 
 BASES
@@ -19,7 +19,8 @@ VIDEOS
 - aecio neves;
 - william bonner & patricia poeta;
 
-CONCEPT
+REFERENCIAS
+- Proibidao: https://en.wikipedia.org/wiki/Proibid%C3%A3o
 - Songify this: http://www.songifythis.com/
 - I am T pain's smule app: http://iamtpain.smule.com/
 - Talk box: https://en.wikipedia.org/wiki/Talk_box
