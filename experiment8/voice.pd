@@ -1,9 +1,9 @@
-#N canvas 467 67 957 778 10;
+#N canvas 1481 85 957 778 10;
 #X obj 155 310 soundfiler;
 #X floatatom 217 351 0 0 0 0 - - -;
 #N canvas 324 218 549 309 (subpatch) 0;
-#X array sf-array2 3.37935e+06 float 0;
-#X coords 0 1 3.37935e+06 -1 60 30 2 0 0;
+#X array sf-array2 1.56989e+07 float 0;
+#X coords 0 1 1.56989e+07 -1 60 30 2 0 0;
 #X restore 116 178 graph;
 #X obj 155 233 openpanel;
 #X obj 112 120 bng 15 250 50 0 empty empty open_panel 17 7 0 9 -262144
@@ -22,7 +22,7 @@
 #X obj 403 269 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
 #X obj 112 141 tgl 15 0 empty empty play/stop 17 7 0 9 -262144 -1 -1
-0 1;
+1 1;
 #X obj 390 212 metro 50;
 #X text 423 186 togles and disables sound;
 #X obj 638 316 outlet~;
@@ -70,7 +70,7 @@
 #X obj 228 33 r bf-loaded;
 #X msg 225 57 1;
 #X obj 399 473 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 6985 1;
+-1 -1 10160 1;
 #X obj 400 426 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
 #X msg 406 448 0.55;
@@ -78,7 +78,7 @@
 #X msg 452 446 0.2;
 #X msg 492 445 0.8;
 #X msg 521 449 0.7;
-#X obj 93 683 dac~;
+#X obj 92 706 dac~;
 #N canvas 127 278 716 431 track-time 0;
 #X obj 294 134 r vc-sampleSize;
 #X floatatom 225 192 5 0 0 0 - - -;
@@ -95,7 +95,7 @@
 #X msg 109 185 stop;
 #X msg 77 210 resume;
 #X obj 250 295 vsl 15 50 0 1 0 0 empty empty empty 0 -9 0 15 -262144
--1 -1 4900 1;
+-1 -1 0 1;
 #X obj 266 250 print;
 #X floatatom 138 290 5 0 0 0 - - -;
 #X connect 0 0 5 0;
@@ -113,6 +113,8 @@
 #X connect 12 0 8 0;
 #X restore 587 533 pd track-time;
 #X obj 29 243 s sf-current-state;
+#X obj 36 669 s~ vc-to-snapshot;
+#X obj 780 187 video;
 #X connect 0 0 1 0;
 #X connect 0 0 5 0;
 #X connect 1 0 27 0;
@@ -122,6 +124,7 @@
 #X connect 5 0 10 0;
 #X connect 6 0 7 0;
 #X connect 7 0 8 0;
+#X connect 7 0 50 0;
 #X connect 8 0 23 0;
 #X connect 8 0 47 0;
 #X connect 8 0 47 1;
