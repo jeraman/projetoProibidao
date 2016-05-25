@@ -20,14 +20,14 @@
 #X obj 257 62 r vc-filename;
 #X obj 257 88 makefilename %s.wav;
 #X obj 202 117 print;
-#X obj 101 447 snapshot~;
-#X floatatom 101 468 5 0 0 0 - - -;
+#X obj 99 444 snapshot~;
+#X floatatom 99 465 5 0 0 0 - - -;
 #X obj 98 401 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
 #X obj 309 394 r vc-set-position;
-#X obj 101 488 s vc-get-position;
+#X obj 99 485 s vc-get-position;
 #X obj 98 380 loadbang;
-#X obj 99 420 metro 1000;
+#X obj 99 421 metro 1000;
 #X connect 0 0 1 0;
 #X connect 0 0 2 0;
 #X connect 1 0 11 0;
