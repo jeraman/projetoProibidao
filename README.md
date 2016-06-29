@@ -6,7 +6,7 @@
 - https://www.youtube.com/watch?v=jiX_jy57MNQ
 
 ###códigos utilizados
-- Autotune: thttp://forum.pdpatchrepo.info/topic/3272/autotune/19
+- Autotune: http://forum.pdpatchrepo.info/topic/3272/autotune/19
 - Timbre ID (specBrightness~): http://williambrent.conflations.com/pages/research.html
 
 ###vídeos utilizados até agora
