@@ -63,8 +63,10 @@ pcm.loopout {
 ```
 
 ###updating the ffmpeg code to include audio and video
-ffmpeg -re -i https://manifest.googlevideo.com/api/manifest/hls_playlist/id/AHSmzcGnTFg.1/itag/94/source/yt_live_broadcast/requiressl/yes/ratebypass/yes/live/1/cmbypass/yes/goi/160/sgoap/itag%3D140/sgovp/itag%3D135/hls_chunk_host/r8---sn-cxaaj5o5q5-t0ae.googlevideo.com/playlist_type/DVR/gcr/ca/mm/32/mn/sn-cxaaj5o5q5-t0ae/ms/lv/mv/u/pcm2cms/yes/pl/22/dover/3/sver/3/fexp/9405186,9405995,9416126,9416891,9419452,9422596,9425620,9428398,9431012,9433096,9433223,9433425,9433946,9434904,9434904,9435526,9435876,9437066,9437262,9437553,9437742,9438227,9438663,9438816,9439124,9439185,9439412,9439497,9439652,9439828,9441086,9441560,9441716/upn/loCLjutR-iw/mt/1468508049/ip/65.94.85.86/ipbits/0/expire/1468530401/sparams/ip,ipbits,expire,id,itag,source,requiressl,ratebypass,live,cmbypass,goi,sgoap,sgovp,hls_chunk_host,playlist_type,gcr,mm,mn,ms,mv,pcm2cms,pl/signature/30CBE22045D5984D983F9949BFD4D0D56808EC1A.493BBF5F2CF4263DD90F49964550EB3DE6447686/key/dg_yt0/playlist/index.m3u8 -vcodec rawvideo -pix_fmt yuv420p -f v4l2 /dev/video1 -acodec -f alsa hw:Loopback,1,0
+sudo ffmpeg -re -thread_queue_size 1024 -i https://manifest.googlevideo.com/api/manifest/hls_playlist/id/AHSmzcGnTFg.1/itag/94/source/yt_live_broadcast/requiressl/yes/ratebypass/yes/live/1/cmbypass/yes/goi/160/sgoap/itag%3D140/sgovp/itag%3D135/hls_chunk_host/r8---sn-cxaaj5o5q5-t0ae.googlevideo.com/playlist_type/DVR/gcr/ca/mm/32/mn/sn-cxaaj5o5q5-t0ae/ms/lv/mv/u/pcm2cms/yes/pl/22/dover/3/sver/3/fexp/9405186,9405995,9416126,9416891,9419452,9422596,9425620,9428398,9431012,9433096,9433223,9433425,9433946,9434904,9434904,9435526,9435876,9437066,9437262,9437553,9437742,9438227,9438663,9438816,9439124,9439185,9439412,9439497,9439652,9439828,9441086,9441560,9441716/upn/loCLjutR-iw/mt/1468508049/ip/65.94.85.86/ipbits/0/expire/1468530401/sparams/ip,ipbits,expire,id,itag,source,requiressl,ratebypass,live,cmbypass,goi,sgoap,sgovp,hls_chunk_host,playlist_type,gcr,mm,mn,ms,mv,pcm2cms,pl/signature/30CBE22045D5984D983F9949BFD4D0D56808EC1A.493BBF5F2CF4263DD90F49964550EB3DE6447686/key/dg_yt0/playlist/index.m3u8 -ar 48100 -async 1 -vcodec rawvideo -pix_fmt yuv420p -f v4l2 /dev/video1 -f alsa hw:Loopback,1,0
 
+###Voila!
+It should be working now! Video should be your second webcam. If you want to use the mic, don't forget to change the default input for the Loopback device.
 
 ###references
 https://trac.ffmpeg.org/wiki/Capture/ALSA
@@ -74,7 +76,7 @@ http://www.alsa-project.org/main/index.php/Asoundrc
 ===
 
 #question
-- How to avoid the video and the audio to stop from times to times;
+- How to avoid the video and the audio to stop from times to times. It runs fine if I use ffplay;
 - Audio is getting out-of-sync with the video. How to fix this?
 
 -- 
