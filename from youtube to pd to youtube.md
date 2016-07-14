@@ -73,11 +73,24 @@ https://trac.ffmpeg.org/wiki/Capture/ALSA
 
 http://www.alsa-project.org/main/index.php/Asoundrc
 
+#Step 4: From mic & webcam to Pd
+Nothing special. Just use the webcam (GEM) and your mic (adc~) as usual.
+
+#Step 5: From Pd to Youtube
+Similar to "[screencapture over network.md](https://github.com/jeraman/projetoProibidao/blob/master/screencapture%20over%20network.md)". The difference is that you need to replace to ip in the end by the Youtube's live's Rmtp and to insert your unique ID. As follows:
+```
+ffmpeg -f alsa -ac 2 -i hw:0,0 -f x11grab -framerate 30 -video_size 1280x720 -i :0.0+0,0 -vcodec libx264 -preset veryfast -maxrate 1984k -bufsize 3968k -vf "format=yuv420p" -g 60 -c:a aac -b:a 128k -ar 44100 -f flv rtmp://a.rtmp.youtube.com/live2/ID
+
+```
+Results in [this](https://www.youtube.com/watch?v=42IXjzoUktc).
+
 ===
 
 #question
 - How to avoid the video and the audio to stop from times to times. It runs fine if I use ffplay;
 - Audio is getting out-of-sync with the video. How to fix this?
+- Audio is low quality. This doesn't happen in ffplay. How to fix this?
+- Test audio quality in Youtube Live.
 
 -- 
 Jeronimo Barbosa
