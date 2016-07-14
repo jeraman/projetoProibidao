@@ -20,7 +20,7 @@ http://comments.gmane.org/gmane.comp.video.ffmpeg.user/54861
 
 #Step 2: From ffmpeg to a webcam (video)
 
-###loads the module
+###loads the video loopback module
 sudo modprobe v4l2loopback
 
 ###streams to the file to the virtual webcam
@@ -37,16 +37,44 @@ https://github.com/umlaeute/v4l2loopback/wiki/Ffmpeg
 
 #Step 3: From ffmpeg to a micrphone (audio)
 
-###... plus playing back the audio from the stream
+###testing if the audio is being captured all right from the video stream
 sudo ffmpeg -re -i https://manifest.googlevideo.com/api/manifest/hls_playlist/id/lHIL4OzHwzU.1/itag/94/source/yt_live_broadcast/requiressl/yes/ratebypass/yes/live/1/cmbypass/yes/goi/160/sgoap/itag%3D140/sgovp/itag%3D135/hls_chunk_host/r1---sn-cxaaj5o5q5-t0as.googlevideo.com/gcr/ca/playlist_type/DVR/mm/32/mn/sn-cxaaj5o5q5-t0as/ms/lv/mv/m/pl/22/dover/3/sver/3/upn/rqqdPgEJDPE/fexp/9405989,9407155,9416126,9416891,9419452,9420096,9422596,9427767,9428398,9431012,9433096,9433380,9433850,9433946,9435241,9435526,9435876,9436607,9436841,9437066,9437552,9437742,9437982,9438519,9438557,9438733,9439442,9439652,9439811/mt/1467235816/ip/65.94.85.86/ipbits/0/expire/1467257491/sparams/ip,ipbits,expire,id,itag,source,requiressl,ratebypass,live,cmbypass,goi,sgoap,sgovp,hls_chunk_host,gcr,playlist_type,mm,mn,ms,mv,pl/signature/120EFCFB10B3093EB14D58C1BA85DE281DDE0F80.8D13202941DE0F06D19FEBA6CC8426A38AAAAE6D/key/dg_yt0/playlist/index.m3u8 -vcodec rawvideo -pix_fmt yuv420p -f v4l2 /dev/video1 -f alsa default
 
+###loads the sound loopback module
+modprobe snd-aloop pcm_substreams=1
+
+###create a ~/.asoundrc file and copy and paste this content (can be improved?)
+```
+# .asoundrc
+pcm.!default {
+	type hw
+	card 0
+} 
+
+pcm.loopin {
+	type plug
+	slave.pcm "hw:Loopback,0,0"
+}
+
+pcm.loopout {
+	type plug
+	slave.pcm "hw:Loopback,1,0"
+}
+```
+
+###updating the ffmpeg code to include audio and video
+ffmpeg -re -i https://manifest.googlevideo.com/api/manifest/hls_playlist/id/AHSmzcGnTFg.1/itag/94/source/yt_live_broadcast/requiressl/yes/ratebypass/yes/live/1/cmbypass/yes/goi/160/sgoap/itag%3D140/sgovp/itag%3D135/hls_chunk_host/r8---sn-cxaaj5o5q5-t0ae.googlevideo.com/playlist_type/DVR/gcr/ca/mm/32/mn/sn-cxaaj5o5q5-t0ae/ms/lv/mv/u/pcm2cms/yes/pl/22/dover/3/sver/3/fexp/9405186,9405995,9416126,9416891,9419452,9422596,9425620,9428398,9431012,9433096,9433223,9433425,9433946,9434904,9434904,9435526,9435876,9437066,9437262,9437553,9437742,9438227,9438663,9438816,9439124,9439185,9439412,9439497,9439652,9439828,9441086,9441560,9441716/upn/loCLjutR-iw/mt/1468508049/ip/65.94.85.86/ipbits/0/expire/1468530401/sparams/ip,ipbits,expire,id,itag,source,requiressl,ratebypass,live,cmbypass,goi,sgoap,sgovp,hls_chunk_host,playlist_type,gcr,mm,mn,ms,mv,pcm2cms,pl/signature/30CBE22045D5984D983F9949BFD4D0D56808EC1A.493BBF5F2CF4263DD90F49964550EB3DE6447686/key/dg_yt0/playlist/index.m3u8 -vcodec rawvideo -pix_fmt yuv420p -f v4l2 /dev/video1 -acodec -f alsa hw:Loopback,1,0
+
+
 ###references
-???
+https://trac.ffmpeg.org/wiki/Capture/ALSA
+http://www.alsa-project.org/main/index.php/Asoundrc
 
 ===
 
 #question
-- How do we route the audio to a virtual mic?
+- How to avoid the video and the audio to stop from times to times;
+- Audio is getting out-of-sync with the video. How to fix this?
 
 -- 
 Jeronimo Barbosa
