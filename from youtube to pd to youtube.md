@@ -100,11 +100,23 @@ results in [this](https://www.youtube.com/watch?v=mxL786aV-6U).
 ===
 
 #question
-- [Step 2] How to avoid the video and the audio to stop from times to times. It runs fine if I use ffplay. How to fix this?
-- [Step 3] Audio is low quality (possibly due to the audio loopback). This doesn't happen in ffplay. How to fix this?
-- [Step 3] Audio is getting out-of-sync with the video after some seconds. How to fix this?
-- [Step 5] How to get only the audio from Pd direct into youtube?
+##[Step 2] 
+How to avoid the video and the audio to stop from times to times. It runs fine if I use ffplay. How to fix this?
+- Minimized playing around with the ffmpeg parameters. The most recent version in Kamilla's computer seems to work fine:
+```
+ffmpeg -re -thread_queue_size 4096 -r 30 -i $STREAM -preset ultrafast -aspect 16:9 -vf scale=1280:720 -vcodec rawvideo -pix_fmt yuv420p -f v4l2 $VIRTUAL_WEBCAM -b:a 126k -ac 1 -ar 44100 -f alsa $VIRTUAL_MIC
+```
 
+##[Step 3] 
+Audio is low quality (possibly due to the audio loopback). This doesn't happen in ffplay. How to fix this?
+- Solved by using Jack! Works like a charm for the input!
+
+Audio is getting out-of-sync with the video after some seconds. How to fix this?
+- Solved by adding a pix_delay (video delay) in the pd-extended code seems to have solved this problem! Yey!
+
+##[Step 5] 
+How to get only the audio from Pd direct into youtube?
+- This is the issue right now. Ffmpeg available in Ubuntu repository does not support jack input. In order to enable this feature, you need to compile the most recent version (you can have both installed at the same time). I did this. The jack output worked, however the compiled version is slow (less than 1 fps) in enconding. How to solve this?
 -- 
 Jeronimo Barbosa
 jeraman.info
