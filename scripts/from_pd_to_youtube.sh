@@ -20,6 +20,7 @@ echo "POSITION: $POSITION"
 #extracting the width
 IFS='x' read -r -a TEMP1 <<< "$POSITION"
 WIDTH=${TEMP1[0]}
+WIDTH=$((WIDTH-8))
 
 #making WIDTH even,if not (limitation from ffmpeg)
 [ $((WIDTH%2)) -eq 1 ] && echo "make WIDTH even!" && WIDTH=$((WIDTH+1))
@@ -39,17 +40,19 @@ IFS='+' read -r -a TEMP2 <<< "${NO_MINUS}"
 
 #extracting height
 HEIGHT=${TEMP2[0]}
+HEIGHT=$((HEIGHT-4))
+
 
 #making HEIGHT even, if not (limitation from ffmpeg)
 [ $((HEIGHT%2)) -eq 1 ] && echo "make WIDTH even!" && HEIGHT=$((HEIGHT+1))
 
 #extracting x coord and shifting value
 X=${TEMP2[1]}
-X=$((X+10))
+X=$((X+14))
 
 #extracing y coord and shifting value
 Y=${TEMP2[2]}
-Y=$((Y+10))
+Y=$((Y+40))
 
 #printing window info
 echo
@@ -77,5 +80,7 @@ CMD="sudo ffmpeg -thread_queue_size 512 -f alsa -i hw:0 -f x11grab -framerate 25
 #print and execute the command
 echo $CMD
 $CMD
+
+
 
 
