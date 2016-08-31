@@ -115,8 +115,9 @@ Audio is getting out-of-sync with the video after some seconds. How to fix this?
 - Solved by adding a pix_delay (video delay) in the pd-extended code seems to have solved this problem! Yey!
 
 ##[Step 5] 
-How to get only the audio from Pd direct into youtube?
-- This is the issue right now. Ffmpeg available in Ubuntu repository does not support jack input. In order to enable this feature, you need to compile the most recent version (you can have both installed at the same time). I did this. The jack output worked, however the compiled version is slow (less than 1 fps) in enconding. How to solve this?
+How to get only the audio from Pd direct into youtube? 
+
+This is the issue right now. Ffmpeg available in Ubuntu repository does not support jack input. In order to enable this feature, you need to compile the most recent version (you can have both installed at the same time). I did this. The jack output worked, however the compiled version is slow (less than 1 fps) in enconding. How to solve this?
 -- 
 Jeronimo Barbosa
 jeraman.info

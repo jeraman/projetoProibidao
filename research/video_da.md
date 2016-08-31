@@ -44,7 +44,8 @@ https://www.raspberrypi.org/products/pi-zero/
 - north america uses atsc. 
 - south america uses isdb-t
 
-### About tv tuners on linux: https://www.linuxtv.org/wiki/index.php/Special:Categories
+##About tv tuners on linux
+https://www.linuxtv.org/wiki/index.php/Special:Categories
 
 ##Products
 
