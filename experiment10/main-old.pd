@@ -1,4 +1,4 @@
-#N canvas 2501 95 608 753 10;
+#N canvas 2350 98 608 753 10;
 #X obj 168 404 autotune2~;
 #X obj 147 696 dac~;
 #X obj 316 34 base-funk;
