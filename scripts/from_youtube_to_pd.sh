@@ -12,8 +12,9 @@ VIDEO=$1
 VIRTUAL_WEBCAM=/dev/video1   
 
 #stores the address for the virtual mic
-VIRTUAL_MIC=hw:Loopback,1,0
-#VIRTUAL_MIC=pcm.jack
+#VIRTUAL_MIC=hw:Loopback,1,0
+VIRTUAL_MIC=pcm.jack
+#VIRTUAL_MIC=pcm.default
 #VIRTUAL_MIC=pcm.aduplex
 
 #stores the link for the stream
@@ -46,8 +47,8 @@ echo "starting..."
 echo
 
 #makes the magic happen!
-sudo ffmpeg -re -thread_queue_size 4096 -r 30 -i $STREAM -preset ultrafast -aspect 16:9 -vf scale=1280:720 -vcodec rawvideo -pix_fmt yuv420p -f v4l2 $VIRTUAL_WEBCAM -b:a 126k -ac 1 -ar 44100 -f alsa $VIRTUAL_MIC
+sudo ffmpeg -re -thread_queue_size 4096 -r 30 -i $STREAM -preset ultrafast -aspect 16:9 -vf scale=1280:720 -vcodec rawvideo -pix_fmt yuv420p -f v4l2 $VIRTUAL_WEBCAM -f alsa -b:a 126k -ac 2 -ar 44100 $VIRTUAL_MIC
 
-#ffmpeg -re -thread_queue_size 4096 -i $STREAM -isync -b:a 64k -ac 1 -ar 44100 -aspect 16:9 -vf scale=1280:720 -vcodec rawvideo -pix_fmt yuv420p -f v4l2 $VIRTUAL_WEBCAM -f alsa $VIRTUAL_MIC
+#sudo ffmpeg -re -thread_queue_size 4096 -i $STREAM -isync -b:a 64k -ac 1 -ar 44100 -aspect 16:9 -vf scale=1280:720 -vcodec rawvideo -pix_fmt yuv420p -f v4l2 $VIRTUAL_WEBCAM -f alsa $VIRTUAL_MIC
 
 #ffmpeg -thread_queue_size 2048 -i $STREAM -isync -ar 48100 -aspect 16:9 -vf scale=1280:720 -vcodec rawvideo -pix_fmt yuv420p -f v4l2 $VIRTUAL_WEBCAM -f alsa $VIRTUAL_MIC
