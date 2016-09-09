@@ -30,7 +30,7 @@ Finally, you need to:
 
 That's it! By now you should have the modified video streamed back to youtube—as shown in picture (c). The video below is an example of this process in practice:
 
-[![IMAGE ALT TEXT](http://img.youtube.com/vi/Uqnc-J1KpdI/0.jpg)](http://www.youtube.com/watch?v=Uqnc-J1KpdI "Example")
+[![VIDEO](video.png)](http://www.youtube.com/watch?v=Uqnc-J1KpdI "VIDEO")
 
 Have fun!
 
