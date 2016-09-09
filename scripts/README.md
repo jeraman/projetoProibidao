@@ -14,7 +14,8 @@ Now we want to get this video inside Pd so that it can be processed locally. For
 
 > 2. Run the 'from_youtube_to_pd.sh' script, passing the _copied URL_ and the _Pd patch_ as parameters;
 
-> 3. Modify the Jack patch, so that there are only two connections: a) from pd-extended to system; and b) from ffmpeg-output to pd-extended;
+> 3. Modify the Jack patch, so that there are only two connections: a) from pd-extended to system; and b) from ffmpeg-output to pd-extended. As follows:
+> ![Jack1] (jack1.png)
 
 
 At this stage you will have the video modified in realtime by your Pd patch. This is represented by (b) in the image above. 
@@ -26,7 +27,7 @@ Finally, you need to:
 
 > 4. Modify the Jack patch, so that you add a connection from pd-extended to ffmpeg-input. The resulting Jack patch should look like this:
 
-> ![Jack] (jack-connections.png)
+> ![Jack2] (jack2.png)
 
 That's it! By now you should have the modified video streamed back to youtube—as shown in picture (c). The video below is an example of this process in practice:
 
