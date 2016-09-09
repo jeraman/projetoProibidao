@@ -11,6 +11,9 @@
 #stores the link for the video
 VIDEO=$1   
 
+#stores the pd patch that will be run
+PATCH=$2
+
 #stores the address for the virtual webcam
 VIRTUAL_WEBCAM=/dev/video1   
 
@@ -80,7 +83,7 @@ echo
 
 #starting puredata
 #sudo pd-extended -jack -open testing-signal-from-youtube.pd
-sudo pd-extended -rt -nogui -jack -open testing-signal-from-youtube.pd
+sudo pd-extended -rt -nogui -jack -open $PATCH
 
 #waits a while to complete
 sleep 2
