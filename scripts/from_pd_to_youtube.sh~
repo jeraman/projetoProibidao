@@ -72,13 +72,11 @@ echo
 #HEIGHT=$((HEIGHT-10))
 
 
-#execute the command
-#sudo ffmpeg -thread_queue_size 512 -f alsa -i hw:0 -f x11grab -framerate 25 -video_size ${WIDTH}x${HEIGHT} -i :0.0+${X},${Y} -vcodec libx264 -preset veryfast -crf 18 -maxrate 1984k -bufsize 3968k -pix_fmt yuv420p -g 60 -acodec libmp3lame -ar 44100 test.mp4
+#format the command - trying to make ffmpeg faster
+CMD="sudo ffmpeg -re -loglevel quiet -thread_queue_size 512 -f alsa -i jack -f x11grab -framerate 25 -video_size ${WIDTH}x${HEIGHT} -i :0.0+${X},${Y} -vcodec libx264 -preset ultrafast -pix_fmt yuv420p -acodec libmp3lame -ar 44100 -f flv rtmp://a.rtmp.youtube.com/live2/$ID"
 
-#-f flv rtmp://a.rtmp.youtube.com/live2/$ID
-
-#format the command
-CMD="sudo ffmpeg -thread_queue_size 512 -f alsa -i jack -f x11grab -framerate 25 -video_size ${WIDTH}x${HEIGHT} -i :0.0+${X},${Y} -vcodec libx264 -preset veryfast -crf 18 -maxrate 1984k -bufsize 3968k -pix_fmt yuv420p -g 60 -acodec libmp3lame -ar 44100 -f flv rtmp://a.rtmp.youtube.com/live2/$ID"
+#original command
+#CMD="sudo ffmpeg -re -loglevel quiet -thread_queue_size 512 -f alsa -i jack -f x11grab -framerate 25 -video_size ${WIDTH}x${HEIGHT} -i :0.0+${X},${Y} -vcodec libx264 -preset ultrafast -crf 18 -maxrate 1984k -bufsize 3968k -pix_fmt yuv420p -g 60 -acodec libmp3lame -ar 44100 -f flv rtmp://a.rtmp.youtube.com/live2/$ID"
 
 #in case you want to try in a local file, try the following one instead
 #CMD="sudo ffmpeg -thread_queue_size 512 -f alsa -i jack -f x11grab -framerate 25 -video_size ${WIDTH}x${HEIGHT} -i :0.0+${X},${Y} -vcodec libx264 -preset veryfast -crf 18 -maxrate 1984k -bufsize 3968k -pix_fmt yuv420p -g 60 -acodec libmp3lame -ar 44100 test.mp4" 

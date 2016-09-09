@@ -9,5 +9,5 @@
 4. Modify the Jack patch, so that you add the pd-extended->ffmpeg-input to the connections.
 
 The resulting Jack patch should look like this:
-(image)
+![Jack] (jack-connections.png)
 

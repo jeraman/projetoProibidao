@@ -62,7 +62,9 @@ echo "starting ffmpeg..."
 echo
 
 #makes the magic happen!
-sudo ffmpeg -re -thread_queue_size 4096 -r 30 -i $STREAM -preset ultrafast -aspect 16:9 -vf scale=1280:720 -vcodec rawvideo -pix_fmt yuv420p -f v4l2 $VIRTUAL_WEBCAM -f alsa -b:a 126k -ac 2 -ar 44100 $VIRTUAL_MIC &
+sudo ffmpeg -re -loglevel quiet -thread_queue_size 2048 -r 30 -i $STREAM -preset ultrafast -aspect 16:9 -vcodec rawvideo -pix_fmt yuv420p -f v4l2 $VIRTUAL_WEBCAM -f alsa -b:a 64k -ac 2 -ar 44100 $VIRTUAL_MIC &
+
+#sudo ffmpeg -re -loglevel quiet -thread_queue_size 4096 -r 30 -i $STREAM -preset ultrafast -aspect 16:9 -vf scale=1280:720 -vcodec rawvideo -pix_fmt yuv420p -f v4l2 $VIRTUAL_WEBCAM -f alsa -b:a 126k -ac 2 -ar 44100 $VIRTUAL_MIC &
 
 #sudo ffmpeg -re -thread_queue_size 4096 -i $STREAM -isync -b:a 64k -ac 1 -ar 44100 -aspect 16:9 -vf scale=1280:720 -vcodec rawvideo -pix_fmt yuv420p -f v4l2 $VIRTUAL_WEBCAM -f alsa $VIRTUAL_MIC
 
@@ -78,7 +80,7 @@ echo
 
 #starting puredata
 #sudo pd-extended -jack -open testing-signal-from-youtube.pd
-sudo pd-extended -jack -nogui -open testing-signal-from-youtube.pd
+sudo pd-extended -rt -nogui -jack -open testing-signal-from-youtube.pd
 
 #waits a while to complete
 sleep 2
@@ -92,9 +94,13 @@ sleep 2
 
 #finishing jackd
 sudo pkill pd-extended
+sleep 1
 sudo pkill ffmpeg
-sudo pkill jackd
-#sudo pkill qjackctl
+sleep 1
+#sudo pkill jackd
+sudo pkill qjackctl
+sleep 1
+sudo pkill qjackdbus
 
 #clearing the screen
 clear

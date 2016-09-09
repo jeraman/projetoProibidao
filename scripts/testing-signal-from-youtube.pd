@@ -1,4 +1,4 @@
-#N canvas 158 185 565 488 10;
+#N canvas 152 195 565 488 10;
 #X obj 35 236 dac~;
 #X obj 35 179 adc~;
 #X obj 139 72 gemhead;
@@ -33,7 +33,7 @@
 #X connect 11 0 8 0;
 #X coords 0 -1 1 1 165 20 1 60 60;
 #X restore 182 109 pd serin;
-#N canvas 650 179 682 322 gemwin 0;
+#N canvas 641 194 682 322 gemwin 1;
 #X obj 102 122 tgl 15 0 \$0-gemstart \$0-gemstart empty 17 7 0 10 -262144
 -1 -1 1 1;
 #X obj 102 161 r \$0-gemstart;
@@ -58,7 +58,6 @@
 1;
 #X text 119 141 fullscreen;
 #X obj 125 -11 key;
-#X obj 124 12 select 27;
 #X msg 215 127 dimen 850 480;
 #X obj 165 103 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
@@ -66,6 +65,7 @@
 #X msg 148 58 1;
 #X obj 153 79 s esc-start;
 #X obj 251 21 loadbang;
+#X obj 124 12 select 32;
 #X connect 1 0 2 0;
 #X connect 2 0 3 0;
 #X connect 2 1 4 0;
@@ -86,19 +86,17 @@
 #X connect 16 0 0 0;
 #X connect 18 0 7 0;
 #X connect 19 0 18 0;
-#X connect 21 0 22 0;
-#X connect 22 0 0 0;
-#X connect 22 0 25 0;
-#X connect 23 0 7 0;
-#X connect 24 0 23 0;
+#X connect 21 0 28 0;
+#X connect 22 0 7 0;
+#X connect 23 0 22 0;
+#X connect 24 0 25 0;
 #X connect 25 0 26 0;
-#X connect 26 0 27 0;
-#X connect 28 0 23 0;
+#X connect 27 0 22 0;
 #X coords 0 -1 1 1 85 60 1 100 100;
 #X restore 453 116 pd gemwin;
 #X obj 197 76 r esc-start;
 #X obj 139 316 rectangle 7 4;
-#N canvas 740 162 450 584 text 0;
+#N canvas 348 82 450 584 text 0;
 #X floatatom 138 460 0 0 0 0 - - -;
 #X msg -252 431 justify right top;
 #X msg -253 404 justify center center;
@@ -113,7 +111,7 @@
 #X obj 72 282 snapshot~;
 #X floatatom 70 307 5 0 0 0 - - -;
 #X obj 113 133 tgl 15 0 empty empty fuck!!! 17 7 0 10 -262144 -1 -1
-0 1;
+1 1;
 #X obj 67 252 osc~ 0.5;
 #X obj 118 254 metro 20;
 #X obj 70 334 * 2;
@@ -127,6 +125,8 @@
 #X msg -33 232 0.5;
 #X obj -32 201 loadbang;
 #X obj 110 64 loadbang;
+#X obj 39 33 key;
+#X obj 43 61 select 32;
 #X connect 0 0 20 1;
 #X connect 1 0 20 0;
 #X connect 2 0 20 0;
@@ -151,6 +151,8 @@
 #X connect 24 0 8 0;
 #X connect 25 0 24 0;
 #X connect 26 0 13 0;
+#X connect 27 0 28 0;
+#X connect 28 0 13 0;
 #X coords 0 -1 1 1 85 60 1 100 100;
 #X restore 302 299 pd text;
 #X floatatom 218 239 5 0 0 0 - - -;
