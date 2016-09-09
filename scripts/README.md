@@ -1,6 +1,7 @@
 #Step-by-step tutorial
 
 The image below summarizes the process. After selecting your video target (picture (a)), you will process it locally on Pd (picture (b)), and then stream it back to youtube (picture (c)).
+
 ![Setup] (setup.png)
 
 ##Step 1
@@ -27,7 +28,12 @@ Finally, you need to:
 
 ![Jack] (jack-connections.png)
 
-That's it! By now you should have the modified video streamed back to youtube—as shown in picture (c). Have fun!
+That's it! By now you should have the modified video streamed back to youtube—as shown in picture (c). 
+
+Have fun!
+
+--
+jeraman.info
 
 
 
