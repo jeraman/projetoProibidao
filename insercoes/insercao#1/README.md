@@ -4,11 +4,11 @@
 
 **Medium:** Youtube Live - TV Câmara
 
-**Link:** https://www.youtube.com/watch?v=iiWjVjfLKhI
+**Original video:** https://www.youtube.com/watch?v=iiWjVjfLKhI
 
 **Date:** September 6 2016
 
-**Duration:** 1h:55min
+**Duration:** 2h:52min
 
 --
 jeraman.info
