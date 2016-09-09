@@ -12,7 +12,7 @@ In the beginning, you need to choose the Youtube live stream video you want to t
 ##Step 2
 Now we want to get this video inside Pd so that it can be processed locally. For this you need to:
 
-> 2. Run the 'from_youtube_to_pd.sh' script, passing the _copied URL_ and the _Pd patch_ as parameters;
+> 2. Run the 'from_youtube_to_pd_via_jack.sh' script, passing the _copied URL_ and the _Pd patch_ (in this case, _"main.pd"_) as parameters;
 
 > 3. Modify the Jack patch, so that there are only two connections: a) from pd-extended to system; and b) from ffmpeg-output to pd-extended. As follows:
 
@@ -30,9 +30,7 @@ Finally, you need to:
 
 > ![Jack2] (jack2.png)
 
-That's it! By now you should have the modified video streamed back to youtube—as shown in picture (c). The video below is an example of this process in practice:
-
-[![VIDEO](video.png)](http://www.youtube.com/watch?v=Uqnc-J1KpdI "VIDEO")
+That's it! By now you should have the modified video streamed back to youtube—as shown in picture (c).
 
 Have fun!
 
