@@ -12,7 +12,7 @@
 #X text 285 -127 para a base;
 #X obj 485 -225 outlet~;
 #X obj 111 165 hradio 15 1 1 4 empty empty choose_base 0 -8 0 9 -262144
--1 -1 0;
+-1 -1 2;
 #X obj 113 198 select 0 1 2 3;
 #X obj 113 250 s bf-stop;
 #X obj 178 252 s bf-load1;
@@ -23,7 +23,7 @@
 #X obj 146 -278 r bf-load3;
 #X obj 227 -150 r bf-stop;
 #X obj 113 132 hsl 60 15 0 1 0 0 bf-volume empty volume -2 -8 0 9 -262144
--1 -1 2360 1;
+-1 -1 1198 1;
 #X obj 486 -281 *~;
 #X obj 508 -309 r bf-volume;
 #X obj 107 37 loadbang;
@@ -32,7 +32,7 @@
 #X text 94 -410 loading the batidao from file and playing it;
 #X obj 485 -338 r~ bf-base;
 #X obj 97 -66 s~ bf-base;
-#X obj 640 141 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 640 141 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
 #X obj 639 165 metro 1000;
 #X obj 697 40 / 60;
@@ -81,8 +81,8 @@
 #X msg 144 -359 s ../../audiodata/base1.wav;
 #X msg 140 -306 s ../../audiodata/base2.wav;
 #X msg 145 -255 s ../../audiodata/base3.wav;
-#X msg 106 60 0.4;
-#X obj 40 -389 r start-batidao;
+#X msg 106 60 0.22;
+#X obj 74 -333 loadbang;
 #X connect 0 0 29 0;
 #X connect 0 1 3 0;
 #X connect 1 0 0 0;
@@ -137,5 +137,5 @@
 #X connect 74 0 4 0;
 #X connect 75 0 4 0;
 #X connect 76 0 21 0;
-#X connect 77 0 73 0;
+#X connect 77 0 74 0;
 #X coords 0 -1 1 1 80 85 1 100 100;

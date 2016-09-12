@@ -1,4 +1,4 @@
-#N canvas 372 87 545 686 10;
+#N canvas 369 92 545 686 10;
 #X obj 173 306 autotune2~;
 #X obj 152 685 dac~;
 #X obj 331 28 base-funk;
@@ -147,14 +147,14 @@
 #X obj 85 577 r play-pure;
 #X obj 174 613 spigot~;
 #X obj 212 589 r play-effect;
-#N canvas 883 181 450 300 config-start-effect 1;
+#N canvas 880 186 450 300 config-start-effect 1;
 #X obj 49 64 select 0 1;
 #X msg 48 87 1;
 #X msg 118 111 1;
-#X obj 127 86 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 127 86 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X msg 80 88 0;
-#X obj 161 114 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 161 114 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
 #X msg 84 112 0;
 #X obj 174 85 s play-pure;
@@ -182,13 +182,13 @@
 #X connect 15 0 9 0;
 #X restore 57 183 pd config-start-effect;
 #X msg 111 406 0.15;
-#N canvas 420 297 562 300 startup 1;
+#N canvas 417 302 562 300 startup 1;
 #X obj 268 3 loadbang;
 #X msg 436 170 \; pd dsp 1 \;;
 #X obj 120 114 s \$0-audiovisual-start;
 #X obj 234 8 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
-#X obj 319 156 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 319 156 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
 #X obj 270 27 delay 50;
 #X obj 266 68 t b b b;
