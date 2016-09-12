@@ -1,9 +1,9 @@
-#N canvas 1995 35 545 969 10;
-#X obj 177 454 autotune2~;
-#X obj 156 872 dac~;
-#X obj 326 147 base-funk;
-#X obj 304 297 dac~;
-#X obj 362 381 scale-manager;
+#N canvas 736 27 477 801 10;
+#X obj 172 409 autotune2~;
+#X obj 150 777 dac~;
+#X obj 279 151 base-funk;
+#X obj 240 300 dac~;
+#X obj 315 327 scale-manager;
 #N canvas 632 527 442 342 rvrb~ 0;
 #X obj 10 257 freeverb~;
 #X obj 115 42 loadbang;
@@ -11,7 +11,7 @@
 #X obj 106 130 vsl 17 40 0 1 0 0 empty empty dry 0 -9 0 9 -262144 -1
 -1 3900 1;
 #X obj 132 130 vsl 17 40 0 1 0 0 empty empty wet 0 -9 0 9 -262144 -1
--1 585 1;
+-1 351 1;
 #X msg 138 199 wet \$1;
 #X msg 67 199 dry \$1;
 #X obj 5 310 outlet~;
@@ -30,16 +30,16 @@
 #X connect 9 0 4 0;
 #X connect 10 0 4 0;
 #X coords 0 -1 1 1 55 80 1 100 100;
-#X restore 178 673 pd rvrb~;
-#X floatatom 116 608 5 0 1 0 - - -;
-#X obj 99 644 *~;
-#X obj 115 560 loadbang;
-#X text 410 822 PROJETO PROIBIDAO;
-#X obj 325 269 *~ 0.2;
-#X obj 363 292 section;
-#X text 428 840 experimento#04;
-#X text 404 858 realtime autotuner;
-#N canvas 1983 93 1130 502 webcam 0;
+#X restore 172 578 pd rvrb~;
+#X floatatom 110 513 5 0 1 0 - - -;
+#X obj 93 549 *~;
+#X obj 109 465 loadbang;
+#X text 336 655 PROJETO PROIBIDAO;
+#X obj 261 272 *~ 0.2;
+#X obj 315 244 section;
+#X text 354 673 experimento#04;
+#X text 330 691 realtime autotuner;
+#N canvas 1629 107 1130 502 webcam 0;
 #X obj 277 152 gemhead;
 #X obj 275 324 pix_texture;
 #X obj 275 288 pix_video;
@@ -73,7 +73,7 @@
 #X coords 0 -1 1 1 165 20 1 60 60;
 #X restore 318 174 pd serin;
 #X text 450 441 based on the example provided by GEM;
-#X obj 123 124 tgl 10 0 empty empty init! 15 5 0 9 -262144 -1 -1 1
+#X obj 123 124 tgl 10 0 empty empty init! 15 5 0 9 -262144 -1 -1 0
 1;
 #X msg 363 135 0;
 #X text 395 136 select the proper webcam;
@@ -86,7 +86,7 @@
 #X msg 107 149 create \, 1;
 #X msg 182 150 destroy;
 #X obj 107 174 gemwin;
-#X obj 108 96 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 108 96 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X text 132 95 rendering;
 #X msg 258 119 dimen 850 480;
@@ -109,7 +109,7 @@
 #X text 393 238 webcam config;
 #X text 628 40 AUDIO;
 #X text 116 32 INTERFACE;
-#X obj 663 134 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 663 134 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X obj 660 218 *~ 1;
 #X obj 692 181 hsl 50 15 1 3 0 0 empty empty empty -2 -8 0 10 -262144
@@ -135,29 +135,29 @@
 #X connect 24 0 9 0;
 #X connect 25 0 20 0;
 #X coords 0 -1 1 1 85 60 1 100 100;
-#X restore 64 141 pd webcam;
-#X msg 115 585 0.02;
-#X obj 64 211 s~ voice;
-#X obj 177 425 r~ voice;
-#X obj 98 528 r~ voice;
-#X obj 51 731 r~ voice;
-#X obj 51 788 spigot~;
-#X obj 89 764 r play-pure;
-#X obj 178 800 spigot~;
-#X obj 216 776 r play-effect;
-#X obj 57 -16 cnv 15 450 100 empty empty empty 20 12 0 14 -233017 -66577
+#X restore 62 157 pd webcam;
+#X msg 109 490 0.02;
+#X obj 62 227 s~ voice;
+#X obj 172 380 r~ voice;
+#X obj 92 433 r~ voice;
+#X obj 45 636 r~ voice;
+#X obj 45 693 spigot~;
+#X obj 83 669 r play-pure;
+#X obj 172 705 spigot~;
+#X obj 210 681 r play-effect;
+#X obj 17 18 cnv 15 450 100 empty empty empty 20 12 0 14 -233017 -66577
 0;
-#X obj 78 -2 tgl 60 0 start empty GO!!!! 80 27 0 50 -262144 -1 -1 1
+#X obj 47 33 tgl 60 0 start empty GO!!!! 80 27 0 50 -262144 -1 -1 0
 1;
 #N canvas 2480 121 450 300 config-start-effect 0;
 #X obj 49 42 r start;
 #X obj 49 64 select 0 1;
 #X msg 48 87 1;
 #X msg 118 111 1;
-#X obj 127 86 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 127 86 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
 #X msg 80 88 0;
-#X obj 161 114 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 161 114 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X msg 84 112 0;
 #X obj 174 85 s play-pure;
@@ -182,8 +182,8 @@
 #X connect 10 0 11 0;
 #X connect 11 0 12 0;
 #X connect 11 1 13 0;
-#X restore 361 61 pd config-start-effect;
-#X text 102 -5;
+#X restore 321 95 pd config-start-effect;
+#X text 267 728 version with less GUI elements;
 #X connect 0 0 5 0;
 #X connect 2 0 3 0;
 #X connect 2 0 10 0;
