@@ -83,7 +83,7 @@ echo
 
 #starting puredata
 #sudo pd-extended -jack -open testing-signal-from-youtube.pd
-sudo pd-extended -rt -jack -open $PATCH
+sudo pd-extended -rt -nogui -jack -open $PATCH
 
 #waits a while to complete
 sleep 2

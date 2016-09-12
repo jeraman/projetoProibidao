@@ -65,7 +65,7 @@ echo "starting ffmpeg..."
 echo
 
 #makes the magic happen!
-sudo ffmpeg -re -loglevel quiet -thread_queue_size 2048 -r 30 -i $STREAM -preset ultrafast -aspect 16:9 -vf scale=1280:720 -vcodec rawvideo -pix_fmt yuv420p -f v4l2 $VIRTUAL_WEBCAM -f alsa -b:a 64k -ac 2 -ar 44100 $VIRTUAL_MIC &
+sudo ffmpeg -re -loglevel quiet -thread_queue_size 2048 -r 30 -i $STREAM -preset ultrafast -aspect 16:9 -vcodec rawvideo -pix_fmt yuv420p -f v4l2 $VIRTUAL_WEBCAM -f alsa -b:a 64k -ac 2 -ar 44100 $VIRTUAL_MIC &
 
 #sudo ffmpeg -re -loglevel quiet -thread_queue_size 4096 -r 30 -i $STREAM -preset ultrafast -aspect 16:9 -vf scale=1280:720 -vcodec rawvideo -pix_fmt yuv420p -f v4l2 $VIRTUAL_WEBCAM -f alsa -b:a 126k -ac 2 -ar 44100 $VIRTUAL_MIC &
 
@@ -83,7 +83,7 @@ echo
 
 #starting puredata
 #sudo pd-extended -jack -open testing-signal-from-youtube.pd
-sudo pd-extended -nogui -rt -jack -open $PATCH
+sudo pd-extended -rt -nogui -jack -open $PATCH
 
 #waits a while to complete
 sleep 2
