@@ -1,4 +1,4 @@
-#Inserção N. 3: Trump: "I'll make racism great again" 
+#Insertion N. 3: Trump: "I'll make racism great again" 
 
 [![VIDEO](video.png)](https://www.youtube.com/watch?v=1PgRtQsIqBQ "VIDEO")
 
@@ -15,4 +15,4 @@
 **Duration:** 00:15min
 
 --
-jeraman.info
+[Jeraman](jeraman.info), 2016.

@@ -5,13 +5,13 @@
 >
 >_3) This always happen whenever someone starts it._
 > 
-> [Cildo Meireles](https://en.wikipedia.org/wiki/Cildo_Meireles), 1970.
+> Cildo Meireles, 1970.
 
 "Insertions into Mediatic Circuits" are a series of media interventions (here called insertions) where live streams from the internet are downloaded, copied, manipulated, and finally streamed back to the internet in realtime. The new stream is identical to the original one, except for the insertion itself. The process is transparent to the media viewer. 
 
 The project is possible due to a custom software framework implemented by the author. This framework is open source and intended to be a creative platform for critical artists and activists. 
 
-Project was conceived and developed by [Jeraman](https://jeraman.info) in 2016.
+Project was conceived and developed by Jeraman, initiated in 2016.
 
 _In a society where people and corporations become media and freely circulate inside the private internet circuits, what kind of insertions would you do?_
 
@@ -25,4 +25,4 @@ _In a society where people and corporations become media and freely circulate in
 [Image Fulgurator](https://juliusvonbismarck.com/bank/index.php?/projects/image-fulgurator/2/), by Julius Von Bismark, 2007.
 
 --
-[jeraman](https://jeraman.info), 2016.
+[Jeraman](https://jeraman.info), 2016.

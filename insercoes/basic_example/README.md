@@ -1,5 +1,23 @@
 #Tutorial
 
+This system is Linux-only and was tested in a Ubuntu 14.04. Let me know if you ever test this in another version/distribution, I'd love to know! 
+
+##Dependencies
+You will need the following software installed:
+- [Youtube-dl](https://rg3.github.io/youtube-dl/); 
+
+- [Ffmpeg](https://ffmpeg.org/) (compiled with Jack); 
+
+- [V4l2loopback](https://github.com/umlaeute/v4l2loopback); 
+
+- [Snd_aloop module] (https://www.alsa-project.org/main/index.php/Matrix:Module-aloop#The_module_options_for_snd-aloop);
+
+- [Pd-extended](https://puredata.info) (hereafter, the Pd);
+
+- [Jack](http://jackaudio.org/).
+
+
+##Process
 The image below summarizes the process. After selecting your video target (picture (a)), you will process it locally on Pd (picture (b)), and then stream it back to youtube (picture (c)).
 
 ![Setup] (setup.png)
@@ -35,7 +53,7 @@ That's it! By now you should have the modified video streamed back to youtube—
 Have fun!
 
 --
-jeraman.info
+[Jeraman](https://jeraman.info), 2016.
 
 
 
