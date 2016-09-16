@@ -13,8 +13,7 @@ The project is possible due to a custom software framework implemented by the au
 
 Project was conceived and developed by [Jeraman](https://jeraman.info) in 2016.
 
-```In a society where people and corporations become media and freely circulate inside the private internet circuits, what kind of insertions would you do?
-```
+_In a society where people and corporations become media and freely circulate inside the private internet circuits, what kind of insertions would you do?_
 
 ##References
 [Inserções em Circuitos Ideológicos](https://passantes.redezero.org/reportagens/cildo/inserc.htm), by Cildo Meireles, 1970.
