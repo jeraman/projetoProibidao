@@ -1,10 +1,10 @@
 #Inserção N. 3: Trump: "I'll make racism great again" 
 
+[![VIDEO](video.png)](https://www.youtube.com/watch?v=1PgRtQsIqBQ "VIDEO")
+
 (Click on the image to see the video)
 
 --
-
-[![VIDEO](video.png)](https://www.youtube.com/watch?v=1PgRtQsIqBQ "VIDEO")
 
 **Medium:** Youtube Live: CNN Live
 
