@@ -1,4 +1,13 @@
-#Insertions into Mediatic Circuits
+        __   ___  __  ___    __        __            ___  __          
+| |\ | /__` |__  |__)  |  | /  \ |\ | /__`    | |\ |  |  /  \ 
+| | \| .__/ |___ |  \  |  | \__/ | \| .__/    | | \|  |  \__/ 
+                                                                      
+      ___  __         ___    __      __     __   __         ___  __ 
+|\/| |__  |  \ |  /\   |  | /  `    /  ` | |__) /  ` |  | |  |  /__` 
+|  | |___ |__/ | /~~\  |  | \__,    \__, | |  \ \__, \__/ |  |  .__/ 
+                                                                      
+===                                                                      
+
 >_1) There are in society certain mecanisms for circulation (circuits);_
 >
 >_2) These circuits clearly reflect the ideology of the producer, but at the same time it is possible they could receive insertions while they circulate;_
@@ -13,7 +22,17 @@ The project is possible due to a custom software framework implemented by the au
 
 Project was conceived and developed by Jeraman, initiated in 2016.
 
-_In a society where people and corporations become media and freely circulate inside the private internet circuits, what kind of insertions would you do?_
+##Examples
+In a society where people and corporations become media and freely circulate inside the private internet circuits, what kind of insertions would you do?
+
+###Fora Temer
+[![VIDEO](insercao#1/video.png)](http://www.youtube.com/watch?v=Uqnc-J1KpdI "VIDEO")
+
+##Solta a batida aê, cumpadi!
+[![VIDEO](insercao#2/video.png)](https://www.youtube.com/watch?v=PiFNaQoV3cQ "VIDEO")
+
+###Trump: "I'll make racism great again" 
+[![VIDEO](insercao#3/video.png)](https://www.youtube.com/watch?v=1PgRtQsIqBQ "VIDEO")
 
 ##References
 [Inserções em Circuitos Ideológicos](https://passantes.redezero.org/reportagens/cildo/inserc.htm), by Cildo Meireles, 1970.
