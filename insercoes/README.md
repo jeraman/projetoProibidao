@@ -1,4 +1,4 @@
-#Inserções em circuitos midiáticos
+#Insertions into Mediatic Circuits
 
 
 ![Image] (https://66.media.tumblr.com/e0c772cdf58c17a69d70ab61d6948621/tumblr_oanyjcSB0w1ula63vo1_1280.jpg)
