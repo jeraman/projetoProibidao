@@ -1,10 +1,11 @@
-        __   ___  __  ___    __        __            ___  __          
-| |\ | /__` |__  |__)  |  | /  \ |\ | /__`    | |\ |  |  /  \ 
-| | \| .__/ |___ |  \  |  | \__/ | \| .__/    | | \|  |  \__/ 
-                                                                      
-      ___  __         ___    __      __     __   __         ___  __ 
-|\/| |__  |  \ |  /\   |  | /  `    /  ` | |__) /  ` |  | |  |  /__` 
-|  | |___ |__/ | /~~\  |  | \__,    \__, | |  \ \__, \__/ |  |  .__/ 
+	        __   ___  __  ___    __        __            ___  __
+	| |\ | /__` |__  |__)  |  | /  \ |\ | /__`    | |\ |  |  /  \ 
+	| | \| .__/ |___ |  \  |  | \__/ | \| .__/    | | \|  |  \__/ 
+                                                                     
+ 
+	      ___  __         ___    __      __     __   __         ___  __ 
+	|\/| |__  |  \ |  /\   |  | /  `    /  ` | |__) /  ` |  | |  |  /__` 
+	|  | |___ |__/ | /~~\  |  | \__,    \__, | |  \ \__, \__/ |  |  .__/ 
                                                                       
 ===                                                                      
 
@@ -26,13 +27,13 @@ Project was conceived and developed by Jeraman, initiated in 2016.
 In a society where people and corporations become media and freely circulate inside the private internet circuits, what kind of insertions would you do?
 
 ###Fora Temer
-[![VIDEO](insercao#1/video.png)](http://www.youtube.com/watch?v=Uqnc-J1KpdI "VIDEO")
+[![VIDEO1](insercao#1/video.png)](http://www.youtube.com/watch?v=Uqnc-J1KpdI "VIDEO1")
 
-##Solta a batida aê, cumpadi!
-[![VIDEO](insercao#2/video.png)](https://www.youtube.com/watch?v=PiFNaQoV3cQ "VIDEO")
+###Solta a batida aê, cumpadi!
+[![VIDEO2](insercao#2/video.png)](https://www.youtube.com/watch?v=PiFNaQoV3cQ "VIDEO2")
 
 ###Trump: "I'll make racism great again" 
-[![VIDEO](insercao#3/video.png)](https://www.youtube.com/watch?v=1PgRtQsIqBQ "VIDEO")
+[![VIDEO3](insercao#3/video.png)](https://www.youtube.com/watch?v=1PgRtQsIqBQ "VIDEO3")
 
 ##References
 [Inserções em Circuitos Ideológicos](https://passantes.redezero.org/reportagens/cildo/inserc.htm), by Cildo Meireles, 1970.
