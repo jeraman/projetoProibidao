@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?><WebcamStudio>
+    <Channels/>
+    <Sources>
+        <Source clazz="webcamstudio.streams.SourceURL" captureWidth="640" captureHeight="480" width="640" height="480" x="0" y="0" panelX="7" panelY="-7" more="false" sliders="false" volume="0.5" opacity="100" rate="5" seek="0" zorder="0" audioLevelLeft="2" audioLevelRight="2" hasVideo="true" hasFakeVideo="false" hasFakeAudio="false" needSeekCTRL="true" hasAudio="true" isIPCam="false" isStillPicture="false" isRTSP="false" isRTMP="false" loaded="false" ADelay="0" VDelay="0" frequencyDVB="0" bandwidthDVB="0" chDVB="0" color="0" isATimer="false" isACDown="false" isPlayList="false" isQRCode="false" backFF="false" protectedCam="false" isOAudio="false" isOVideo="false" loop="false" duration="0" preView="false" isPaused="false" isPlaying="false">
+            <uuid><![CDATA[feb76241-d1d5-4e48-be31-426661234144]]></uuid>
+            <name><![CDATA[URL]]></name>
+            <gsEffect/>
+            <abitrate><![CDATA[128]]></abitrate>
+            <vbitrate><![CDATA[1200]]></vbitrate>
+            <comm><![CDATA[AV]]></comm>
+            <webURL><![CDATA[https://manifest.googlevideo.com/api/manifest/hls_playlist/id/tL13eIQBoog.0/itag/94/source/yt_live_broadcast/requiressl/yes/ratebypass/yes/live/1/cmbypass/yes/goi/160/sgoap/itag%3D140/sgovp/itag%3D135/hls_chunk_host/r7---sn-cxaaj5o5q5-t0ae.googlevideo.com/playlist_type/DVR/gcr/ca/mm/32/mn/sn-cxaaj5o5q5-t0ae/ms/lv/mv/u/pl/22/dover/3/upn/nSwJCaZeR5A/mt/1474656820/ip/70.52.97.112/ipbits/0/expire/1474678897/sparams/ip,ipbits,expire,id,itag,source,requiressl,ratebypass,live,cmbypass,goi,sgoap,sgovp,hls_chunk_host,playlist_type,gcr,mm,mn,ms,mv,pl/signature/193C8D227558A4515D3DF219FCEB91F0FB67E94A.923090CC30968794DFFF038B4C59B709F62211D4/key/dg_yt0/playlist/index.m3u8]]></webURL>
+            <content/>
+            <fontName/>
+            <ptzBrand><![CDATA[foscam]]></ptzBrand>
+            <panelType><![CDATA[PanelURL]]></panelType>
+            <streamTime><![CDATA[N/A]]></streamTime>
+            <audioSource/>
+            <guid/>
+            <Effects/>
+            <Channels/>
+            <startTransitions clazz="webcamstudio.channels.transitions.ResizeIn"/>
+            <endTransitions/>
+        </Source>
+    </Sources>
+    <Mixer width="640" height="480" rate="25"/>
+</WebcamStudio>
