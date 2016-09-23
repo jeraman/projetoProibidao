@@ -3,9 +3,7 @@ https://sourceforge.net/projects/webcamstudio/
 
 I saw it is possible to replicate what my script does using this java-based software. However, I didn't manage to make it work properly yet: it was slow on Kamilla's computer (around 15 FPS maximum to get a video from youtube running locally, and sound was struggling as well). The interface was not intuitive to me.
 
-Just checked the CPU usage: Java was tooking around 200%! 
-
-Big unsync between Audio and Video.
+Just checked the CPU usage: Java was tooking around 200%!
 
 [![webcamstudio.png]](https://www.youtube.com/watch?v=Q0plutYNjJM)
 
