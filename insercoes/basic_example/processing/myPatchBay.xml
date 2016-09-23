@@ -1,0 +1,34 @@
+<!DOCTYPE patchbay>
+<patchbay version="0.3.10" name="myPatchBay">
+ <output-sockets>
+  <socket exclusive="off" client="alsa-jack\.rawjackP\.[0-9]+\.0" type="jack-audio" name="FFmpeg">
+   <plug>out_000</plug>
+   <plug>out_001</plug>
+  </socket>
+  <socket exclusive="off" client="pd_extended_0" type="jack-audio" name="Pd-output">
+   <plug>output0</plug>
+   <plug>output1</plug>
+  </socket>
+ </output-sockets>
+ <input-sockets>
+  <socket exclusive="off" client="alsa-jack\.rawjackC\.[0-9]+\.0" type="jack-audio" name="FFmpeg-Input">
+   <plug>in_000</plug>
+   <plug>in_001</plug>
+  </socket>
+  <socket exclusive="off" client="system" type="jack-audio" name="System">
+   <plug>playback_1</plug>
+   <plug>playback_2</plug>
+  </socket>
+  <socket exclusive="off" client="pd_extended_0" type="jack-audio" name="Pd-input">
+   <plug>input0</plug>
+   <plug>input1</plug>
+  </socket>
+ </input-sockets>
+ <slots/>
+ <cables>
+  <cable output="FFmpeg" input="Pd-input" type="jack-audio"/>
+  <cable output="Pd-output" input="System" type="jack-audio"/>
+  <cable output="Pd-output" input="FFmpeg-Input" type="jack-audio"/>
+ </cables>
+</patchbay>
+
