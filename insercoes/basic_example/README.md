@@ -2,6 +2,8 @@
 
 This system is Linux-only and was tested in a Ubuntu 14.04. Let me know if you ever test this in another version/distribution, I'd love to know! 
 
+*OBS:* For now on, there is no longer the need to configure Jack connections. There is now a python script that automates this process. 
+
 ##Dependencies
 You will need the following software installed:
 - [Youtube-dl](https://rg3.github.io/youtube-dl/); 
@@ -14,7 +16,9 @@ You will need the following software installed:
 
 - [Pd-extended](https://puredata.info) (hereafter, the Pd);
 
-- [Jack](http://jackaudio.org/).
+- [Jack](http://jackaudio.org/);
+
+- [PyJack](http://jackclient-python.readthedocs.io).
 
 
 ##Process
@@ -32,7 +36,7 @@ Now we want to get this video inside Pd so that it can be processed locally. For
 
 > 2. Run the 'from_youtube_to_pd_via_jack.sh' script, passing the _copied URL_ and the _Pd patch_ (in this case, _"main.pd"_) as parameters;
 
-> 3. Modify the Jack patch, so that there are only two connections: a) from pd-extended to system; and b) from ffmpeg-output to pd-extended. As follows:
+> 3. *[Out of data. No need to do this. Kept for reference]* Modify the Jack patch, so that there are only two connections: a) from pd-extended to system; and b) from ffmpeg-output to pd-extended. As follows:
 
 > ![Jack1] (jack1.png)
 
@@ -42,9 +46,9 @@ At this stage you will have the video modified in realtime by your Pd patch. Thi
 ##Step 3
 Finally, you need to:
 
-> 3. Run the 'from_pd_to_youtube.sh' script, passing your live youtube video ID as parameter;
+> 3. Run the 'from_pd_to_youtube.sh' script, passing your live youtube video ID as parameter. In case you don't, the script will save the modified video in a local file;
 
-> 4. Modify the Jack patch, so that you add a connection from pd-extended to ffmpeg-input. The resulting Jack patch should look like this:
+> 4. *[Out of data. No need to do this. Kept for reference]* Modify the Jack patch, so that you add a connection from pd-extended to ffmpeg-input. The resulting Jack patch should look like this:
 
 > ![Jack2] (jack2.png)
 

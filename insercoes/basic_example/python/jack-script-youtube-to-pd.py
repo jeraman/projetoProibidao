@@ -7,13 +7,21 @@
 ########################################
 
 #importing jack
-import jack, time
+import jack, time, sys
 
 #setting up a new client
 client = jack.Client("MyGreatClient")
 
+#wait a little bit
+time.sleep(2)
+
 #getting all ports
 ports = client.get_ports()
+
+#printing them
+print "ports are:"
+print ports
+print 
 
 #disconnects all ports
 for i in ports:
@@ -22,35 +30,24 @@ for i in ports:
 			client.disconnect(i,j)
 			print "aqui deu! de " + str(i) + " para "+ str(j)
 		except:
-			print
-			#print "aqui nao deu! de " + str(i) + " para "+ str(j)
+			"nada"
 
 #gets alsa-jack output
 alsajackout = client.get_ports("alsa-jack(.*)out")
+
 #print "alsa-jack out"
-#print alsajack
-#print
+if alsajackout.__len__()==0:
+	print "[ERROR!]  No alsa jack output found in Jack. Please, try again. "
+	sys.exit(1)
 
 #gets pd-extended inputs
 pdin = client.get_ports("pd_extended(.*)input")
-#print "pd input"
-#print pdin
-#print 
 
 #gets pd-extended output
 pdout = client.get_ports("pd_extended(.*)output")
-#print "pd output"
-#print pdout
-#print 
 
 #gets the system
 system = client.get_ports("system(.*)playback")
-#print "system playback"
-#print system
-#print
-
-#gets alsa-jack output
-#alsajackin = client.get_ports("alsa-jack(.*)in")
 
 #connects alsajack to pd
 client.connect(alsajackout[0],pdin[0])

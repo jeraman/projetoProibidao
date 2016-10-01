@@ -9,6 +9,18 @@
 #stores the youtube ID
 ID=$1
 
+echo
+echo "***********************************"
+echo " INSERCOES EM CIRCUITOS MEDIATICOS"
+echo "***********************************" 
+echo "     (cc) jeraman.info, 2016"
+echo "***********************************"
+echo
+
+#wait a little bit
+sleep 1
+
+
 #asks the user to select the area he wants to stream
 echo
 echo "select the window you want to cast"
@@ -71,23 +83,73 @@ echo
 #WIDTH=$((WIDTH-10))
 #HEIGHT=$((HEIGHT-10))
 
+#init variable
+CMD=""
 
-#format the command - trying to make ffmpeg faster
-CMD="sudo ffmpeg -re -loglevel quiet -thread_queue_size 512 -f alsa -i jack -f x11grab -framerate 25 -video_size ${WIDTH}x${HEIGHT} -i :0.0+${X},${Y} -vcodec libx264 -preset ultrafast -pix_fmt yuv420p -acodec libmp3lame -ar 44100 -f flv rtmp://a.rtmp.youtube.com/live2/$ID"
+#if no id was passed
+if [ -z "$ID" ]; then
+	echo "MISSING THE YOUTUBE LIVE ID. USING A LOCAL FILE INSTEAD..."
 
-#original command
-#CMD="sudo ffmpeg -re -loglevel quiet -thread_queue_size 512 -f alsa -i jack -f x11grab -framerate 25 -video_size ${WIDTH}x${HEIGHT} -i :0.0+${X},${Y} -vcodec libx264 -preset ultrafast -crf 18 -maxrate 1984k -bufsize 3968k -pix_fmt yuv420p -g 60 -acodec libmp3lame -ar 44100 -f flv rtmp://a.rtmp.youtube.com/live2/$ID"
+	#using ffmpeg with localfile
+	CMD="sudo ffmpeg -re -loglevel quiet -thread_queue_size 512 -f alsa -i jack -f x11grab -framerate 25 -video_size ${WIDTH}x${HEIGHT} -i :0.0+${X},${Y} -vcodec libx264 -preset veryfast -crf 18 -maxrate 1984k -bufsize 3968k -pix_fmt yuv420p -g 60 -acodec libmp3lame -ar 44100 test.mp4" 
 
-#in case you want to try in a local file, try the following one instead
-#CMD="sudo ffmpeg -thread_queue_size 512 -f alsa -i jack -f x11grab -framerate 25 -video_size ${WIDTH}x${HEIGHT} -i :0.0+${X},${Y} -vcodec libx264 -preset veryfast -crf 18 -maxrate 1984k -bufsize 3968k -pix_fmt yuv420p -g 60 -acodec libmp3lame -ar 44100 test.mp4" 
+	sudo rm test.mp4
 
+#if the id was passed
+else
+	echo "ID OK. USING YOUTUBE LIVE..."
+
+	#format the command - trying to make ffmpeg faster
+	CMD="sudo ffmpeg -re -loglevel quiet -thread_queue_size 512 -f alsa -i jack -f x11grab -framerate 25 -video_size ${WIDTH}x${HEIGHT} -i :0.0+${X},${Y} -vcodec libx264 -preset ultrafast -pix_fmt yuv420p -acodec libmp3lame -ar 44100 -f flv rtmp://a.rtmp.youtube.com/live2/$ID"
+
+fi
+
+echo
+echo
+wait 2
 
 #print and execute the command
 echo $CMD
-$CMD
+$CMD &
 
-#stop puredata
-sudo pkill pd-extended
+#and setting up jack connections
+echo
+echo "setting up jack connections..."
+echo
+
+wait 3
+
+#waits a while to complete
+
+#automatically adjusting jack connections
+sudo python python/jack-script-pd-to-youtube.py 
+
+wait 5
+
+#kills all processes if 'q' is pressed
+echo
+echo "*************************************************************"
+echo "READY TO GO! MODIFICATION IN PROGRESS... PRESS 'q' TO STOP!"
+echo "*************************************************************"
+echo
+
+while :
+do
+    read -t 1 -n 1 key
+
+    if [[ $key = q ]]
+    then
+        break
+    fi
+done
+
+echo
+echo "stopping the process..."
+echo
+
+#finishing ffmpeg
+sleep 1
+sudo pkill ffmpeg
 
 clear
 
