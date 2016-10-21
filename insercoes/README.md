@@ -1,4 +1,6 @@
 #Insertions into Mediatic Circuits
+[![VIDEO](preview.jpg)](https://vimeo.com/188303561 "VIDEO")
+
 >_1) There are in society certain mecanisms for circulation (circuits);_
 >
 >_2) These circuits clearly reflect the ideology of the producer, but at the same time it is possible they could receive insertions while they circulate;_
@@ -7,22 +9,30 @@
 > 
 > Cildo Meireles, 1970.
 
-"Insertions into Mediatic Circuits" are a series of media interventions (here called insertions) where live streams from the internet are downloaded, copied, manipulated, and finally streamed back to the internet in realtime. The new stream is identical to the original one, except for the insertion itself. The process is transparent to the media viewer. 
+"Insertions into Mediatic Circuits" are a series of media interventions (here called insertions) where live streams from the internet are downloaded, copied, manipulated, and finally streamed back to the internet in realtime. The new stream is almost identical to the original one, except for the insertion itself. The process is transparent to the media viewer. 
 
 The project is possible due to a custom software framework implemented by the author. This framework is open source and intended to be a creative platform for critical artists and activists. 
 
 Project was conceived and developed by Jeraman, initiated in 2016.
 
-##Examples
-In a society where people and corporations become media and freely circulate inside the private internet circuits, what kind of insertions would you do?
+##Motivation
+This project motivates me because it allows me to explore three particular questions:
 
-###Fora Temer
+1. Considering that the "medium is the message" (i.e. the medium embeds the ideology of the producer), how can we subvert the original ideology of the producer, aiming at more diverse, fair, and critical media?
+
+2. Considering the power of (political, social, entertaining... affective) mediated experiences in our society, which are instantaneously shared as soon as they happen with almost no critical ponderation about their meanings, origins, and purpose, what would be the impact of such insertions?
+
+3. I believe that all creations somehow embed the ideology of their creators, and technology is not different. How can we deconstruct this idea that technology is "neutral" and "coding" is not a political act?
+
+##Examples
+
+###[Insertion n. 1] Fora Temer
 [![VIDEO1](insercao%231/video.png)](http://www.youtube.com/watch?v=Uqnc-J1KpdI "VIDEO1")
 
-###Solta a batida aê, cumpadi!
+###[Insertion n. 2] Solta a batida aê, cumpadi!
 [![VIDEO2](insercao%232/video.png)](https://www.youtube.com/watch?v=PiFNaQoV3cQ "VIDEO2")
 
-###Trump: "I'll make racism great again" 
+###[Insertion n. 3] Trump: "I'll make racism great again" 
 [![VIDEO3](insercao%233/video.png)](https://www.youtube.com/watch?v=1PgRtQsIqBQ "VIDEO3")
 
 ##References
