@@ -35,6 +35,9 @@ This project motivates me because it allows me to explore three particular quest
 ###[Insertion n. 3] Trump: "I'll make racism great again" 
 [![VIDEO3](insercao%233/video.png)](https://www.youtube.com/watch?v=1PgRtQsIqBQ "VIDEO3")
 
+###[Insertion n. 4] Final presidential debate - Clinton vs. Trumlolo 
+[![VIDEO4](insercao%234/video.png)](https://www.youtube.com/watch?v=wMI1vJmla4Y "VIDEO4")
+
 ##References
 [Inserções em Circuitos Ideológicos](https://passantes.redezero.org/reportagens/cildo/inserc.htm), by Cildo Meireles, 1970.
 

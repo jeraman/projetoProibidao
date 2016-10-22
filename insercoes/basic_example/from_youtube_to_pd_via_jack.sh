@@ -88,7 +88,7 @@ echo
 sleep 2
 
 #makes the magic happen!
-sudo ffmpeg -re -loglevel quiet -thread_queue_size 4096 -r 30 -i $STREAM -preset ultrafast -aspect 16:9 -vf scale=1280:720 -vcodec rawvideo -pix_fmt yuv420p -f v4l2 $VIRTUAL_WEBCAM -f alsa -b:a 126k -ac 2 -ar 44100 $VIRTUAL_MIC &
+sudo ffmpeg -re -loglevel quiet -thread_queue_size 2048 -r 30 -i $STREAM -preset ultrafast -aspect 16:9 -vf scale=1280:720 -vcodec rawvideo -pix_fmt yuv420p -f v4l2 $VIRTUAL_WEBCAM -f alsa -b:a 126k -ac 2 -ar 44100 $VIRTUAL_MIC &
 
 #sudo ffmpeg -re -thread_queue_size 4096 -i $STREAM -isync -b:a 64k -ac 1 -ar 44100 -aspect 16:9 -vf scale=1280:720 -vcodec rawvideo -pix_fmt yuv420p -f v4l2 $VIRTUAL_WEBCAM -f alsa $VIRTUAL_MIC
 
@@ -104,7 +104,7 @@ echo
 sleep 4
 
 #starting puredata
-sudo pd-extended -rt -nogui -jack -open $PATCH &
+sudo pd-extended -rt -jack -open $PATCH &
 
 #and setting up jack connections
 echo
